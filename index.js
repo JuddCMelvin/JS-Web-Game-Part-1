@@ -28,16 +28,18 @@ newImage('assets/green-character.gif','fixed', '100px', '100px')
 // pineTree.style.bottom = '200px'
 // document.body.append(pineTree)
 
-function newItem () {
+function newItem (src, position, left, right)  {
     let sword = document.createElement('img')
-        sword.src = 'assets/sword.png'
-        sword.style.position = 'fixed'
-        sword.style.left = '500px'
-        sword.style.bottom = '405px'
+        sword.src = src
+        sword.style.position = position
+        sword.style.left = left
+        sword.style.bottom = right
         document.body.append(sword)
-        sword.addEventListener('click', function(){
+        sword.addEventListener('dblclick', function(){
         sword.remove()
     })
 }
 
-newItem()
+newItem('assets/sword.png', 'fixed', '500px', '405px')
+newItem('assets/shield.png', 'fixed', '165px', '185px')
+newItem('assets/staff.png', 'fixed', '600px', '100px')
